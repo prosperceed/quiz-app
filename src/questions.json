@@ -29,5 +29,21 @@
             "answer": "Individual who uses Microsoft Word","isCorrect": false 
                 }
         ]
+    },
+
+    {
+        "id": 3,
+        "qstText": "Nigeria is a...",
+        "answers": [
+            {"id": 1,
+            "answer": "Country", "isCorrect": true
+                },
+                {"id": 2,
+                "answer": "Continent", "isCorrect": false
+                    },
+                    {"id": 3,
+            "answer": "Zoo","isCorrect": false 
+                }
+        ]
     }
 ]
