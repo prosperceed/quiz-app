@@ -1,12 +1,17 @@
 import { useState } from 'react'
-
+import Navbar from './components/header/Navbar'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Home from './components/home/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-    Hello App
+    <div>
+      <Navbar/>
+      <Home/>
     </div>
   )
 }

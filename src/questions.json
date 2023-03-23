@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "qstText": "What is React Js?",
+        "answers": [
+            {"id": 1,
+            "answer": "An algorithm", "isCorrect": false
+                },
+                {"id": 2,
+                "answer": "A database that stores JavaScript functions", "isCorrect": false
+                    },
+                    {"id": 3,
+            "answer": "A JavaScript library that is used to build web UI", "isCorrect": true
+                }
+        ]
+    },
+
+    {
+        "id": 2,
+        "qstText": "Who is a computer programmer?",
+        "answers": [
+            {"id": 1,
+            "answer": "Person Who writes a computer program and maintains them", "isCorrect": true
+                },
+                {"id": 2,
+                "answer": "Professors who teach how to solve mathematical problems", "isCorrect": false
+                    },
+                    {"id": 3,
+            "answer": "Individual who uses Microsoft Word","isCorrect": false 
+                }
+        ]
+    }
+]
