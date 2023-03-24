@@ -11,14 +11,17 @@ const [result, setResult] = useState("")
 const handleAnswer = isCorrect =>{
   if(isCorrect){
     setScore(score + 1)
-
   }
 
   const nextQuestion = currentQuestion + 1
   if(nextQuestion < questions.length){
     setCurrentQuestion(nextQuestion)
   } else{
-    setResult(`You scored a total of ${score} from the Quiz`)
+    const finalScore = score + (isCorrect ? 1 : 0); // add one more point if last answer was correct
+    setScore(finalScore);
+    const answerButtons = document.querySelectorAll('.answerBtn');
+    answerButtons.forEach(button => button.disabled = true); // disable answer buttons
+    setResult(`You scored ${finalScore} out of ${questions.length} questions`);
   }
 }
 
@@ -47,7 +50,7 @@ const handlePrev = () =>{
       {questions[currentQuestion].answers.map(ans =>(
         <div key={ans.id}>
         
-            <span className="flex flex-col justify-between my-6" > <button onClick={()=> handleAnswer(ans.isCorrect)} className="py-3 px-4 bg-yellow-500 rounded text-center" >{ans.answer}</button> </span>
+            <span className="flex flex-col justify-between my-6" > <button onClick={(e)=> handleAnswer(ans.isCorrect)} className="answerBtn py-3 px-4 bg-yellow-500 rounded text-center" >{ans.answer}</button> </span>
         
         </div>
         
